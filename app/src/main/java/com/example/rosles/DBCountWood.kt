@@ -887,7 +887,7 @@ inner join djangoForest_forestly as forestly on s2.id_forestly_id = forestly.id)
 //    }
 
 
-    fun CreateLesPorodsV2(value: PerechetWood?,id_sample:Int){
+    fun CreateLesPorodsV2(value: PerechetWood?,id_sample:Int,flag:Boolean?){
         val db = this.writableDatabase
         val o2=value?.o2
         val o5=value?.o5
@@ -905,9 +905,9 @@ inner join djangoForest_forestly as forestly on s2.id_forestly_id = forestly.id)
         db.execSQL(
             """ insert into djangoForest_list (to0_2, from0_21To0_5, from0_6To1_0, from1_1to1_5, from1_5, 
                     id_breed_id, id_sample_id, id_type_of_reproduction_id, avg_diameter, avg_height, 
-                    max_height,mark_update) values(  $o2, $o5, $o6,$o11, $o15, 
+                    max_height,mark_update,main) values(  $o2, $o5, $o6,$o11, $o15, 
                     $id_breed, $id_sample, $type, $AVGdiametr, $AVGHEight,
-                    $maxHeight,2)"""
+                    $maxHeight,2,$flag)"""
         )
         db.close()
     }
@@ -975,7 +975,7 @@ inner join djangoForest_forestly as forestly on s2.id_forestly_id = forestly.id)
 //        db.close()
 //    }
 
-    fun UpdateLesPorodsV2(value: PerechetWood?){
+    fun UpdateLesPorodsV2(value: PerechetWood?,flag: Boolean?){
         val db = this.writableDatabase
         var o2=value?.o2
         var o5=value?.o5
@@ -990,7 +990,7 @@ inner join djangoForest_forestly as forestly on s2.id_forestly_id = forestly.id)
         db.execSQL(
             """ update djangoForest_list set to0_2 = $o2, from0_21To0_5 = $o5, from0_6To1_0 = $o6, from1_1to1_5 = $o11, from1_5 = $o15, 
                     avg_diameter = $AVGdiametr, avg_height = $AVGHEight, count_of_plants = 0,
-                    max_height = $maxHeight, mark_update=1 where id = $id_prob"""
+                    max_height = $maxHeight, mark_update=1, main=$flag where id = $id_prob"""
         )
         db.close()
     }

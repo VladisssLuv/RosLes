@@ -63,6 +63,12 @@ class sync() {
 
         var listregion=db.getLISTREGION()
         var oldlistregion=db.getLISTREGION()
+
+        listregion.forEach{
+            if (it.dacha=="")
+                it.dacha=null
+        }
+
         viewModels.putLISTREGION(LISTREGION_REQUEST(listregion))
         delay(10000)
         if (temp.temp_object!=null){

@@ -203,20 +203,21 @@ class Wood : BaseActivity("Пробная площадь") {
             writedata(vidWood)
             writedatapodles(vidWoodpodles)
             hashbufWood.forEach { t, u ->
+
                 if(u?.iskus?.id_prob==null){
-                    db.CreateLesPorodsV2(u?.iskus, id_sample)
+                    db.CreateLesPorodsV2(u?.iskus, id_sample,u?.flag_main)
                 }else{
-                    db.UpdateLesPorodsV2(u.iskus)
+                    db.UpdateLesPorodsV2(u.iskus,u?.flag_main)
                 }
                 if(u?.estes?.id_prob==null){
-                    db.CreateLesPorodsV2(u?.estes, id_sample)
+                    db.CreateLesPorodsV2(u?.estes, id_sample,u?.flag_main)
                 }else{
-                    db.UpdateLesPorodsV2(u.estes)
+                    db.UpdateLesPorodsV2(u.estes,u?.flag_main)
                 }
                 if(u?.estestvenn?.id_prob==null){
-                    db.CreateLesPorodsV2(u?.estestvenn, id_sample)
+                    db.CreateLesPorodsV2(u?.estestvenn, id_sample,u?.flag_main)
                 }else{
-                    db.UpdateLesPorodsV2(u.estestvenn)
+                    db.UpdateLesPorodsV2(u.estestvenn,u?.flag_main)
                 }
             }
             podlesokhash.forEach { t, u ->

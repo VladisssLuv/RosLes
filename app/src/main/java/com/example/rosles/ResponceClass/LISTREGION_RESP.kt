@@ -15,6 +15,6 @@ data class LISTREGION_DATA(
     val id_profile: Int?=0,
     val number_region:String?=null,
     val id_district_forestly:Int,
-    val dacha:String
+    var dacha:String?
 
     ) : BaseResponceInterface
