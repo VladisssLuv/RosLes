@@ -202,6 +202,8 @@ class Wood : BaseActivity("Пробная площадь") {
         binding.include.save.setOnClickListener {
             writedata(vidWood)
             writedatapodles(vidWoodpodles)
+
+            val count_of_plant=binding.asd.text.toString().toInt()
             hashbufWood.forEach { t, u ->
 
                 if(u?.iskus?.id_prob==null){
