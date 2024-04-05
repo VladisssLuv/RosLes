@@ -591,11 +591,11 @@ inner join djangoForest_forestly as forestly on s2.id_forestly_id = forestly.id)
 
         for(i in 1 .. cursor.count) {
             val square = Square(
-                cursor.getString(cursor.getColumnIndex("id")),
-                cursor.getString(cursor.getColumnIndex("lenght")),
-                cursor.getString(cursor.getColumnIndex("width")),
-                cursor.getInt(cursor.getColumnIndex("square")).toString(),
-                cursor.getString(cursor.getColumnIndex("date"))
+                cursor.getString(cursor.getColumnIndex("id"))?:"",
+                cursor.getString(cursor.getColumnIndex("lenght"))?:"",
+                cursor.getString(cursor.getColumnIndex("width"))?:"",
+                cursor.getInt(cursor.getColumnIndex("square")).toString()?:"",
+                cursor.getString(cursor.getColumnIndex("date"))?:""
             )
             squareList.add(square)
             cursor.moveToNext()
@@ -904,12 +904,18 @@ inner join djangoForest_forestly as forestly on s2.id_forestly_id = forestly.id)
 
         val temp=o2!!+o5!!+o6!!+o11!!+o15!!
 
+        var value_flag=0
+
+        if (flag!!){
+            value_flag=1
+        }
+
         db.execSQL(
             """ insert into djangoForest_list (to0_2, from0_21To0_5, from0_6To1_0, from1_1to1_5, from1_5, 
                     id_breed_id, id_sample_id, id_type_of_reproduction_id, avg_diameter, avg_height, 
                     max_height,mark_update,main,count_of_plants) values(  $o2, $o5, $o6,$o11, $o15, 
                     $id_breed, $id_sample, $type, $AVGdiametr, $AVGHEight,
-                    $maxHeight,2,$flag,$temp)"""
+                    $maxHeight,2,$value_flag,$temp)"""
         )
         db.close()
     }
@@ -991,10 +997,17 @@ inner join djangoForest_forestly as forestly on s2.id_forestly_id = forestly.id)
 
         val temp:Int? = o2!!+o5!!+o6!!+o11!!+o15!!
 
+        var value_flag=0
+
+        if (flag!!){
+            value_flag=1
+        }
+
+
         db.execSQL(
             """ update djangoForest_list set to0_2 = $o2, from0_21To0_5 = $o5, from0_6To1_0 = $o6, from1_1to1_5 = $o11, from1_5 = $o15, 
                     avg_diameter = $AVGdiametr, avg_height = $AVGHEight, count_of_plants = 0,
-                    max_height = $maxHeight, mark_update=1, main=$flag, count_of_plants=$temp where id = $id_prob"""
+                    max_height = $maxHeight, mark_update=1, main=$value_flag, count_of_plants=$temp where id = $id_prob"""
         )
         db.close()
     }

@@ -24,7 +24,8 @@ data class PerechetWood(
     var AVGHEight: Float? = 0f,
     var AVGdiametr: Float? = 0f,
     var id_prob: Int? = null,
-    var allwoods:Int?=0
+    var allwoods:Int?=0,
+    var count_of_plants:Int=0
 )
 
 
