@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECECEC">
+
+
+
+    <TableLayout
+        android:id="@+id/tbl_layoutHight"
+        android:layout_width="fill_parent"
+
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_table">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:padding="5dip"
+                android:text="Лесничество"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="Участковое &#10;лесничество"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="Квартал"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:padding="5dip"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Выдел"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:padding="5dip"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Проба"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lesnnich"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="Брянское"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#000"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:id="@+id/district"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dip"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Мичуринское"
+                android:textColor="#000"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:id="@+id/quater"
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="3"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#000"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:id="@+id/vudel"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="25-4"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#000"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:id="@+id/proba"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="1"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/red_color"
+                android:textSize="@dimen/custom_size_text_medium" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/tbl_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbl_layoutHight">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/background_table">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="Количество деревьев главной породы"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dip"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:text="Необходимое количество деревьев"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/valuewood"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:id="@+id/needvaluewood"
+                android:layout_width="0dp"
+                android:layout_weight="2.5"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="100"
+                android:textColor="@color/red_color"
+                android:textSize="@dimen/custom_size_text_medium" />
+        </TableRow>
+    </TableLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/switch_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/WoodRecycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbl_layout2">
+
+        <TextView
+            android:id="@+id/lesoblast"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@color/activecolumn"
+            android:text="Лесообразующая порода"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/custom_size_table" />
+
+        <TextView
+            android:id="@+id/podlesoblast"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/custom_size_table"
+            android:textColor="@color/gray"
+            android:background="#DADADA"
+            android:text="Подлесок" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/WoodRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/activecolumn"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_toolbar"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_wood"
+        android:visibility="visible"        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/WoodRecyclerpodles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/activecolumn"
+        android:visibility="invisible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_toolbar"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_wood" />
+
+    <TableLayout
+        android:id="@+id/tbl_layoutpodlesok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WoodRecyclerpodles"
+        android:visibility="invisible">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_table">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="Количество растений"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="Средняя высота"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/kolras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+
+                android:background="@drawable/rounded"
+                android:onClick="onClickCell"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+
+            <EditText
+                android:id="@+id/avgHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/rounded"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone"
+                android:hint="0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+        </TableRow>
+    </TableLayout>
+
+
+    <TableLayout
+        android:id="@+id/tbl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:stretchColumns="*"
+        app:layout_constraintTop_toBottomOf="@+id/WoodRecycler"
+        android:visibility="visible">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:background="@color/background_table">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="до 0.2"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="0.2-&#10;0.5"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="0.6-&#10;1"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="1.1-&#10;1.5"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text=">1.5"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Макс&#10; высота"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Сред&#10; высота"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Сред&#10; диаметр"
+                android:textColor="#ffff"
+                android:textSize="@dimen/custom_size_table" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/iskus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_span="8"
+                android:layout_margin="3dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Искусственное"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textAlignment="center"
+                android:textColor="@color/color_text"
+                android:textSize="@dimen/custom_size_table" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/iskus02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:onClick="onClickCell"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <TextView
+                android:id="@+id/iskus05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:onClick="onClickCell"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <TextView
+                android:id="@+id/iskus06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:onClick="onClickCell"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <TextView
+                android:id="@+id/iskus11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:onClick="onClickCell"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <TextView
+                android:id="@+id/iskus15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:onClick="onClickCell"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+
+            <EditText
+                android:id="@+id/maksHeightIskus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:gravity="center"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <TextView
+                android:id="@+id/AvgHeightIskus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <EditText
+                android:id="@+id/AvgDiametrIskus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/estes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_span="8"
+                android:layout_margin="3dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:text="Естественное"
+                android:textColor="@color/color_text"
+                android:textSize="@dimen/custom_size_table" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/estes02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:onClick="onClickCell"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <TextView
+                android:id="@+id/estes05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:onClick="onClickCell"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <TextView
+                android:id="@+id/estes06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:onClick="onClickCell"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <TextView
+                android:id="@+id/estes11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:onClick="onClickCell"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <TextView
+                android:id="@+id/estes15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:onClick="onClickCell"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <EditText
+                android:id="@+id/maksHeightestes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:hint="0"
+                android:text="0"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+
+            <TextView
+                android:id="@+id/AvgHeightestes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:hint="0"
+                android:text="0"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <EditText
+                android:id="@+id/AvgDiametrestes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/estestvennoe"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_span="8"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:ellipsize="end"
+
+                android:text="Естесвенное порослевое"
+                android:layout_margin="3dp"
+                android:textColor="@color/color_text"
+                android:textSize="@dimen/custom_size_table" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/estestvennoe02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:onClick="onClickCell"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <TextView
+                android:id="@+id/estestvennoe05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:onClick="onClickCell"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <TextView
+                android:id="@+id/estestvennoe06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:onClick="onClickCell"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <TextView
+                android:id="@+id/estestvennoe11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/rounded"
+                android:onClick="onClickCell"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <TextView
+                android:id="@+id/estestvennoe15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/rounded"
+                android:onClick="onClickCell"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <EditText
+                android:id="@+id/maksHeightestestvennoe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+
+            <TextView
+                android:id="@+id/AvgHeightestestvennoe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+            <EditText
+                android:id="@+id/AvgDiametrestestvennoe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text" />
+
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/ddd"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Общее &#10; количество"
+                android:textColor="@color/color_text"
+                android:textSize="@dimen/custom_size_text_small" />
+
+            <TextView
+                android:id="@+id/asd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_span="6"
+                android:layout_weight="2"
+                android:background="@drawable/rounded"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/custom_size_text_medium" />
+
+        </LinearLayout>
+
+    </TableLayout>
+
+
+    <ImageView
+        android:id="@+id/buttonMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/custom_size_button_big"
+
+        android:layout_marginTop="10dp"
+        android:src="@drawable/iconminus"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPlus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbl_layout" />
+
+
+    <ImageView
+        android:id="@+id/buttonPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/custom_size_button_big"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/iconplus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonMinus"
+        app:layout_constraintTop_toBottomOf="@+id/tbl_layout" />
+
+    <include
+        android:id="@+id/include"
+        android:imeOptions="flagNoFullscreen"
+        layout="@layout/menu3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

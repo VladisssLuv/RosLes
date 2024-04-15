@@ -175,6 +175,12 @@ class Wood : BaseActivity("Пробная площадь") {
                         db.getperechetID(id_sample,2,valueles.id),
                         db.getperechetID(id_sample,3,valueles.id))
                     hashbufWood.put(valueles.name,buf)
+                    hashbufWood.forEach { t,u->
+                        u?.flag_main=false
+                    }
+                    GetCountWood("")
+
+
                 }
                 if (valuepodles.id==0){
                     flagpodles = false

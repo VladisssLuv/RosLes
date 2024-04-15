@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:imeOptions="flagNoFullscreen"
+    android:orientation="horizontal"
+    android:visibility="visible"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <Button
+        android:id="@+id/user"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/custom_size_button_menu"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:paddingTop="8dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/color_button_main"
+        android:drawableTop="@drawable/user"
+        android:text="@string/menu_card"
+        android:textSize="10sp"
+        app:cornerRadius="30dp" />
+
+    <Button
+        android:id="@+id/addporod"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/custom_size_button_menu"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/color_button_main"
+        android:drawableTop="@drawable/leaf"
+        android:text="@string/menu_add_porod"
+        android:textSize="10sp"
+        app:cornerRadius="30dp" />
+
+    <Button
+        android:id="@+id/open"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/custom_size_button_menu"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/color_button_main"
+        android:drawableTop="@drawable/file"
+        android:text="@string/menu_open"
+        android:textSize="10sp"
+
+        app:cornerRadius="30dp" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/custom_size_button_menu"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/color_button_main"
+        android:drawableTop="@drawable/edit"
+        android:text="@string/menu_add"
+        android:textSize="10sp"
+        app:cornerRadius="30dp" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/custom_size_button_menu"
+        android:layout_marginEnd="15dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/color_button_main"
+        android:paddingTop="7dp"
+        android:drawableTop="@drawable/minus_svg"
+        android:text="@string/menu_delete"
+        android:textSize="10sp"
+        app:cornerRadius="30dp" />
+
+</LinearLayout>

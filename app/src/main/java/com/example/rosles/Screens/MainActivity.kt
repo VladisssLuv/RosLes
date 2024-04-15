@@ -5,6 +5,7 @@ import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.MenuItem
 import android.view.View
 import android.widget.*
@@ -65,6 +66,7 @@ class MainActivity : BaseActivity("Перечетные ведомости") {
         // отсюда вычитаем единицу тк как в противном случае выходим в оут оф баунс(данные не записываются в полном обьеме)
         for (i in 0..porodaList.size-1) {
             val tableRow = TableRow(this)
+            val date_parse = porodaList[i].date.replace('-','.')
             /* Порядок важен, знацения будут добавляться в колонки таблицы
             * в порядке указанном в valuesOfPoroda */
             val valuesOfPorodaList: List<String> = mutableListOf(
@@ -73,12 +75,14 @@ class MainActivity : BaseActivity("Перечетные ведомости") {
                 porodaList[i].nameDistrictForestly,
                 porodaList[i].quarterName,
                 porodaList[i].soilLot,
-                porodaList[i].date)
+                date_parse)
             // сборка строки для тоблицы
             for((indexOfvalue, valueOfPoroda) in valuesOfPorodaList.withIndex()) {
+
                 val text = TextView(this)
                 text.textAlignment = View.TEXT_ALIGNMENT_CENTER
                 text.setTextColor(-0x1000000)
+                text.setTextSize(TypedValue.COMPLEX_UNIT_SP,12f)
                 text.text = valueOfPoroda
 //                if (indexOfvalue == 1)
 //                    text.visibility = View.GONE
