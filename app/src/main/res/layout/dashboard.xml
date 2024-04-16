@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_weight="1"
+        android:visibility="gone" />
+
 <!--    <include-->
 <!--        android:id="@+id/include"-->
 <!--        layout="@layout/nav_menu"-->
@@ -16,102 +25,245 @@
 <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 
-
-
-    <Button
+    <LinearLayout
         android:id="@+id/perechet"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:drawableLeft="@drawable/keyboard"
-        android:text="Перечетная ведомость"
-        android:textSize="@dimen/custom_size_text"
-        app:cornerRadius="50dp"
-        android:layout_weight="1"
-        style="@style/MaterialAlertDialog.Material3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:orientation="vertical">
 
 
-    <Button
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/test" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="18dp"
+                android:layout_weight="1"
+                android:text="Перечетная ведомость"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="15dp"
+                android:layout_weight="0"
+                android:src="@drawable/baseline_arrow_forward_ios_24" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="30dp"
+            android:background="#9CA4A3" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
         android:id="@+id/reload"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:backgroundTint="@color/color_button_main"
-        android:drawableLeft="@drawable/reload"
-        android:text="Обновить"
-        style="@style/MaterialAlertDialog.Material3"
-        android:textSize="@dimen/custom_size_text"
-        app:cornerRadius="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ALLDOWNLOAD" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="5dp"
+        android:orientation="vertical">
 
-    <Button
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/reload_update" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="18dp"
+                android:layout_weight="1"
+                android:text="Обновить"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="15dp"
+                android:layout_weight="0"
+                android:src="@drawable/baseline_arrow_forward_ios_24" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="30dp"
+            android:background="#9CA4A3" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
         android:id="@+id/gps"
-        style="@style/MaterialAlertDialog.Material3"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:drawableLeft="@drawable/location"
-        android:text="GPS трекер"
-        android:textSize="@dimen/custom_size_text"
-        app:cornerRadius="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/perechet"
-        tools:ignore="RtlSymmetry" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="5dp"
+        android:orientation="vertical">
 
-    <Button
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gps_dash" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="18dp"
+                android:layout_weight="1"
+                android:text="GPS трекер"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="15dp"
+                android:layout_weight="0"
+                android:src="@drawable/baseline_arrow_forward_ios_24" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="30dp"
+            android:background="#9CA4A3" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/profile"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="5dp"
+        android:orientation="vertical">
 
-        android:drawableLeft="@drawable/man"
-        android:text="Профиль"
-        android:textSize="@dimen/custom_size_text"
-        app:cornerRadius="50dp"
-        style="@style/MaterialAlertDialog.Material3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gps" />
 
-    <Button
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/profile_dash" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="18dp"
+                android:layout_weight="1"
+                android:text="Профиль"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="15dp"
+                android:layout_weight="0"
+                android:src="@drawable/baseline_arrow_forward_ios_24" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="30dp"
+            android:background="#9CA4A3" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/ALLDOWNLOAD"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:drawableLeft="@drawable/download"
-        android:text="Загрузка данных"
-        android:textSize="@dimen/custom_size_text"
-        app:cornerRadius="50dp"
-        style="@style/MaterialAlertDialog.Material3"
-        android:paddingRight="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="5dp"
+        android:orientation="vertical">
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="match_parent"
-        android:visibility="gone"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/download_dash" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="18dp"
+                android:layout_weight="1"
+                android:text="Загрузка данных"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="15dp"
+                android:layout_weight="0"
+                android:src="@drawable/baseline_arrow_forward_ios_24" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="30dp"
+            android:background="#9CA4A3" />
+
+    </LinearLayout>
+
+
+
 
 
 </LinearLayout>

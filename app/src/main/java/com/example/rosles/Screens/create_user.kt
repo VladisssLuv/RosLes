@@ -77,8 +77,8 @@ class create_user:AppCompatActivity() {
         binding.name.editUser.setHint("ФИО")
         binding.filial.editUser.setHint("Телефон")
         binding.email.editUser.setHint("Email")
-        binding.password.editUser.setHint("Password")
-        binding.passwordapply.editUser.setHint("Confirm Password")
+        binding.password.editUser.setHint("Пароль")
+        binding.passwordapply.editUser.setHint("Подтвердите пароль")
 
         binding.CreateSave.setOnClickListener {
 

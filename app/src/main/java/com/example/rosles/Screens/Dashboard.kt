@@ -105,12 +105,12 @@ class Dashboard: BaseActivity() {
             var database = DBCountWood(this, null)
             database.writableDatabase
             lifecycleScope.launch {
-                binding.progressBar.visibility=View.VISIBLE
+                visibleScrool()
                 sync().main1(viewModel,database,this@Dashboard,id_user,id_subject)
 
                 delay(2000)
                 Toast.makeText(this@Dashboard, "Данные обновленны", Toast.LENGTH_SHORT).show()
-                binding.progressBar.visibility=View.GONE
+                invisibleScrool()
             }
 
             // загрузка ВСЕХ справочников
@@ -127,13 +127,13 @@ class Dashboard: BaseActivity() {
             var database = DBCountWood(this, null)
             database.writableDatabase
             lifecycleScope.launch{
-                binding.progressBar.visibility=View.VISIBLE
+                visibleScrool()
 
                 sync().load(viewModel,db,this@Dashboard)
 //                delay(2000)
 //                sync().main1(viewModel,database, context,value)
                 Toast.makeText(this@Dashboard, "Успех", Toast.LENGTH_SHORT).show()
-                binding.progressBar.visibility=View.GONE
+                invisibleScrool()
 
             }
 
@@ -141,6 +141,35 @@ class Dashboard: BaseActivity() {
 
         binding.gps.setOnClickListener{
             startActivity(Intent(this, GpxTrack::class.java))
+        }
+    }
+
+
+    fun visibleScrool(){
+        with(binding){
+            progressBar.visibility=View.VISIBLE
+
+            perechet.visibility=View.GONE
+            reload.visibility=View.GONE
+            gps.visibility=View.GONE
+            profile.visibility=View.GONE
+            ALLDOWNLOAD.visibility=View.GONE
+
+
+        }
+    }
+
+    fun invisibleScrool(){
+        with(binding){
+            progressBar.visibility=View.GONE
+
+            perechet.visibility=View.VISIBLE
+            reload.visibility=View.VISIBLE
+            gps.visibility=View.VISIBLE
+            profile.visibility=View.VISIBLE
+            ALLDOWNLOAD.visibility=View.VISIBLE
+
+
         }
     }
 

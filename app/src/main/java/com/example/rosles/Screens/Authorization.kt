@@ -3,23 +3,20 @@ package com.example.rosles.Screens
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.text.InputType
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
-import android.util.Log
 import android.view.View
 import android.view.Window
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.viewModelScope
 import com.example.rosles.Network.*
 import com.example.rosles.RequestClass.AuthRequest
 import com.example.rosles.ResponceClass.AuthReSponce
 import com.example.rosles.ResponceClass.BaseResponceInterface
 import com.example.rosles.databinding.AuthorizationActivityBinding
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 
 
 class Authorization: AppCompatActivity() {
@@ -31,9 +28,15 @@ class Authorization: AppCompatActivity() {
         val viewModel by viewModels<ViewModels>() // Q
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
 
+
+
         CheckUser()
         binding = AuthorizationActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.login.textField.hint="Введите email"
+        binding.pass.textField.hint="Введите пароль"
+        binding.pass.editUser.setInputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
+
         binding.buttonLogin.setOnClickListener {
             if (binding.login.editUser.text.isEmpty()){
                 binding.emaileror.visibility=View.VISIBLE
@@ -60,7 +63,7 @@ class Authorization: AppCompatActivity() {
                 override fun ifSuccess(responce: BaseResponceInterface?) {
                     if (responce != null && responce is AuthReSponce){
 
-                        saveText(responce.id, responce.FIO,)
+                        saveText(responce.id, responce.FIO)
                     }
 
                     Toast.makeText(this@Authorization, "Вы авторизовались", Toast.LENGTH_SHORT).show()

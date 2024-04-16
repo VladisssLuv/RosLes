@@ -32,7 +32,7 @@
 
     <include
         android:id="@+id/login"
-        layout="@layout/custom_input_form"
+        layout="@layout/google_input_form"
         android:layout_width="match_parent"
         android:layout_marginHorizontal="5dp"
         android:layout_height="0dp"
@@ -51,7 +51,7 @@
 
     <include
         android:id="@+id/pass"
-        layout="@layout/custom_input_form_pass"
+        layout="@layout/google_input_form"
         android:layout_width="match_parent"
         android:layout_marginHorizontal="5dp"
         android:layout_height="0dp"
