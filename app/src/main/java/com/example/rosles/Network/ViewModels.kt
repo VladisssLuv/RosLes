@@ -93,8 +93,8 @@ class ViewModels():BaseViewModel(
             //value for id
             val data= accountsRepository.getSUBJECTRF(value)
 
-            dbCountWood.writeSUBJECTRF(data.id_main_subject,data.name_main_subject)
-            getFORESTLY(dbCountWood,data.id_main_subject)
+            //dbCountWood.writeSUBJECTRF(data.id_main_subject,data.name_main_subject)
+            //getFORESTLY(dbCountWood,data.id_main_subject)
             data.slave_subject.forEach {
                 dbCountWood.writeSUBJECTRF(it.id_subject,it.name_slave_subject)
                 getFORESTLY(dbCountWood,it.id_subject)
