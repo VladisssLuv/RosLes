@@ -26,11 +26,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:forceDarkAllowed="false"
-        
-
         android:theme="@style/Theme.Rosles"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
+        <service
+            android:exported="false"
+            android:name="com.example.rosles.utils.services.GpsForegroundService"/>
 
         <activity
             android:name=".Screens.Authorization"
