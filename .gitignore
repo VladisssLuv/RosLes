@@ -2,6 +2,11 @@
 .gradle
 /local.properties
 .idea/
+/.idea/
+/.idea/gradle.xml
+/.idea/compiler.xml
+/.idea/misc.xml
+/.idea/vcs.xml
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
